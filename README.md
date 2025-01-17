@@ -44,7 +44,6 @@ This program implements the classic "99 Bottles of Beer" song on an ESP32 microc
 - The program uses a custom serial configuration (7E1) which all serial monitors may not support
 
 ## Flow Chart
-Decrement Bottles and Repeat
 ![BeerSong_Flowchart](https://github.com/user-attachments/assets/77414ead-09ac-4ea7-9102-fe897af30e22)
 
 
