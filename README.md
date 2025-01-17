@@ -43,6 +43,10 @@ This program implements the classic "99 Bottles of Beer" song on an ESP32 microc
 - The Arduino framework doesn't support SERIAL_7E1, which is why PuTTY is recommended for monitoring
 - The program uses a custom serial configuration (7E1) which all serial monitors may not support
 
+ ## Handling Initialization Garbage Data
+
+To filter out the garbage data produced during ESP32 initialization, you can use a Python script to read and process the serial output. This script can ignore the initial garbage data and only display the relevant program output.
+
 ## Flow Chart
 ![BeerSong_Flowchart](https://github.com/user-attachments/assets/77414ead-09ac-4ea7-9102-fe897af30e22)
 
