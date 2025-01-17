@@ -3,7 +3,7 @@
 This program implements the classic "99 Bottles of Beer" song on an ESP32 microcontroller. It uses serial communication for output and user interaction, and a physical button for resetting the song.
 
 ## Features
-- **Interactive Song**: Prompts the user after each verse to continue or stop.
+- **Interactive Song**: Prompts the user to continue or stop after each verse.
 - **Reset Button**: Reset the song by pressing a button when all bottles are consumed.
 - **Serial Monitoring**: Displays the song's progress and user prompts in a terminal.
 - **Customizable Bottles**: Start with any initial number of bottles.
@@ -41,28 +41,10 @@ This program implements the classic "99 Bottles of Beer" song on an ESP32 microc
 
 - There might be garbage data at the start due to different baud rate initialization in ESP32 (115200)
 - The Arduino framework doesn't support SERIAL_7E1, which is why PuTTY is recommended for monitoring
-- The program uses a custom serial configuration (7E1) which may not be supported by all serial monitors
+- The program uses a custom serial configuration (7E1) which all serial monitors may not support
 
 ## Flow Chart
-
-  Start
-   |
-   v
-Initialize Variables, Serial, Button
-   |
-   v
-Are Bottles > 0? -----> No -----> Reset Bottles (Wait for Button Press)
-   |                               |
-   v                               v
- Print Song Verse       Prompt to Reset
-   |
-   v
-Prompt User Input (yes/y or no/n)
-   |
-   v
-Continue? -----------> No -----> Stop Execution
-   |
-   v
 Decrement Bottles and Repeat
+![BeerSong_Flowchart](https://github.com/user-attachments/assets/77414ead-09ac-4ea7-9102-fe897af30e22)
 
 
